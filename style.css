@@ -621,19 +621,50 @@ a.work-image {
 /* スマートフォン対応 */
 @media (max-width: 640px) {
   .header-inner {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 18px 20px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 16px;
+  }
+
+  .header-inner > div {
+    flex-shrink: 0;
+  }
+
+  .site-title {
+    font-size: 22px;
+  }
+
+  .site-subtitle {
+    display: none;
   }
 
   .site-nav {
-    width: 100%;
-    justify-content: space-between;
-    gap: 12px;
+    width: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  .site-nav a {
+    padding: 2px 0;
+    white-space: nowrap;
   }
 
   .section {
     padding: 56px 20px;
+  }
+
+  .hero.section {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  .hero-layout {
+    min-height: auto;
+    gap: 28px;
   }
 
   h2 {
